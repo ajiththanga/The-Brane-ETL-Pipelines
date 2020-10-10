@@ -30,7 +30,7 @@ This script and methodology can be used as a template for projects that require 
 #### Ontology Mapping<br />
 By using the ontology mapper any data from YAGO or Wikidata can be automatically categorized in order to be dealt with appropriately.<br />
 
-##### EXAMPLES
+###### EXAMPLES
 
 Saving ontology maps as dataframes to be parsed:
 ```python
@@ -68,7 +68,7 @@ def schema_ontology_mapping(data):
 #### Sparql Querying<br />
 Data can be directly imported from open-source knowledge databases using their sparql APIs.<br />
 
-##### EXAMPLES
+###### EXAMPLES
 
 Function to get all yago properties for a star using YAGO sparql API:
 ```python
