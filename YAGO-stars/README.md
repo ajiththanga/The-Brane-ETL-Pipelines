@@ -32,21 +32,21 @@ By using the ontology mapper any data from YAGO or Wikidata can be automatically
 Saving ontology maps:
 
 '''python
-   # use creds to create a client to interact with the Google Drive API
-   scope = ['https://spreadsheets.google.com/feeds',
-            'https://www.googleapis.com/auth/drive']
-   creds = ServiceAccountCredentials.from_json_keyfile_name('client_secret.json', scope)
-   client = gspread.authorize(creds)
+# use creds to create a client to interact with the Google Drive API
+scope = ['https://spreadsheets.google.com/feeds',
+         'https://www.googleapis.com/auth/drive']
+creds = ServiceAccountCredentials.from_json_keyfile_name('client_secret.json', scope)
+client = gspread.authorize(creds)
 
-   # schema
-   sheet = client.open("Ontology mappings for YAGO Resources").worksheet('Property Schema Datatypes')
-   # Extract and save as pandas df
-   list_of_hashes = sheet.get_all_records()
-   df_schema = pd.DataFrame(list_of_hashes)
+# schema
+sheet = client.open("Ontology mappings for YAGO Resources").worksheet('Property Schema Datatypes')
+# Extract and save as pandas df
+list_of_hashes = sheet.get_all_records()
+df_schema = pd.DataFrame(list_of_hashes)
 
-   # wikidata
-   sheet = client.open("Ontology mappings for YAGO Resources").worksheet('Wikidata Property Datatypes')
-   # Extract and save as pandas df
-   list_of_hashes = sheet.get_all_records()
-   df_wikidata = pd.DataFrame(list_of_hashes)
+# wikidata
+sheet = client.open("Ontology mappings for YAGO Resources").worksheet('Wikidata Property Datatypes')
+# Extract and save as pandas df
+list_of_hashes = sheet.get_all_records()
+df_wikidata = pd.DataFrame(list_of_hashes)
 '''
