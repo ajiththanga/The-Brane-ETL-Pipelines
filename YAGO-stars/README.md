@@ -27,10 +27,10 @@ and using ontology mappers to automate the categorization of rdf-triples as topi
 ### FUTURE USE CASES
 This script and methodology can be used as a template for projects that require the importing of data from open-source rdf knowledge databases.
 
-* Ontology Mapping<br />
+#### Ontology Mapping<br />
 By using the ontology mapper any data from YAGO or Wikidata can be automatically categorized in order to be dealt with appropriately.<br />
 
-#####EXAMPLES
+##### EXAMPLES
 
 Saving ontology maps as dataframes to be parsed:
 ```python
@@ -65,10 +65,10 @@ def schema_ontology_mapping(data):
     '''
 ```
 
-* Sparql Querying<br />
+#### Sparql Querying<br />
 Data can be directly imported from open-source knowledge databases using their sparql APIs.<br />
 
-#####EXAMPLES
+##### EXAMPLES
 
 Function to get all yago properties for a star using YAGO sparql API:
 ```python
@@ -94,5 +94,5 @@ def get_wikidata_info(wikidata_search):
     '''
 ```
 
-* General Graph Creation<br />
+#### General Graph Creation<br />
 The procedure this script follows to import and classify data, and then transform it into topics that are stored for link creation, can be modified and updated as needed.
