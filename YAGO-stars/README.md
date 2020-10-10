@@ -28,25 +28,23 @@ and using ontology mappers to automate the categorization of rdf-triples as topi
 This script and methodology can be used as a template for projects that require the importing of data from open-source rdf knowledge databases.
 
 * Ontology Mapping
-By using the ontology mapper any data from YAGO or Wikidata can be automatically categorized in order to be dealt with appropriately.
+By using the ontology mapper any data from YAGO or Wikidata can be automatically categorized in order to be dealt with appropriately.<br />
 Saving ontology maps:
-   ### 2. SAVE ONTOLOGY MAPS
+    # use creds to create a client to interact with the Google Drive API
+    scope = ['https://spreadsheets.google.com/feeds',
+             'https://www.googleapis.com/auth/drive']
+    creds = ServiceAccountCredentials.from_json_keyfile_name('client_secret.json', scope)
+    client = gspread.authorize(creds)
+    
+    # schema
+    sheet = client.open("Ontology mappings for YAGO Resources").worksheet('Property Schema Datatypes')
+    # Extract and save as pandas df
+    list_of_hashes = sheet.get_all_records()
+    df_schema = pd.DataFrame(list_of_hashes)
 
-   # use creds to create a client to interact with the Google Drive API
-   scope = ['https://spreadsheets.google.com/feeds',
-            'https://www.googleapis.com/auth/drive']
-   creds = ServiceAccountCredentials.from_json_keyfile_name('client_secret.json', scope)
-   client = gspread.authorize(creds)
-
-   # schema
-   sheet = client.open("Ontology mappings for YAGO Resources").worksheet('Property Schema Datatypes')
-   # Extract and save as pandas df
-   list_of_hashes = sheet.get_all_records()
-   df_schema = pd.DataFrame(list_of_hashes)
-
-   # wikidata
-   sheet = client.open("Ontology mappings for YAGO Resources").worksheet('Wikidata Property Datatypes')
-   # Extract and save as pandas df
-   list_of_hashes = sheet.get_all_records()
-   df_wikidata = pd.DataFrame(list_of_hashes)
+    # wikidata
+    sheet = client.open("Ontology mappings for YAGO Resources").worksheet('Wikidata Property Datatypes')
+    # Extract and save as pandas df
+    list_of_hashes = sheet.get_all_records()
+    df_wikidata = pd.DataFrame(list_of_hashes)
 
