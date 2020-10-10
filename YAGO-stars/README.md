@@ -31,7 +31,7 @@ This script and methodology can be used as a template for projects that require 
 By using the ontology mapper any data from YAGO or Wikidata can be automatically categorized in order to be dealt with appropriately.<br />
 Saving ontology maps:
 
-'''
+'''python
    # use creds to create a client to interact with the Google Drive API
    scope = ['https://spreadsheets.google.com/feeds',
             'https://www.googleapis.com/auth/drive']
