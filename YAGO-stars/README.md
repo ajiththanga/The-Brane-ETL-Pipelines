@@ -20,8 +20,8 @@ and using ontology mappers to automate the categorization of rdf-triples as topi
   **YAGO**
   * Get all YAGO rdf-triples and categorize each as a topic, property, or metadata. 
   * Create topics and links for star types and properties. Store metadata.<br />
-**Wikidata**
+ **Wikidata**
   * Get all Wikidata rdf-triples and categorize each as a topic, property, or metadata.
   * Create topics and links for constellations and properties. Store metadata.<br />
-**Create star topic and make the relevant links.**
+ **Create star topic and make the relevant links.**
 * Format topics and links, output json files, push data to yago-stars graph using topics api.
