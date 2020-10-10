@@ -4,7 +4,7 @@ A python script that creates a graph of all stars stored in YAGO (~14,000).<br /
 Stars are categorized by star type (YAGO) and constellation (Wikidata).<br />
 Relevant properties from YAGO and Wikidata are also included.<br />
 
-![Alt text](/relative/path/to/yago-stars graph.JPG?raw=true)
+![ScreenShot](yago-stars graph.JPG)
 
 ### MOTIVATION
 
