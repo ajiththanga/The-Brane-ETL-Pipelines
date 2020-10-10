@@ -1,17 +1,17 @@
-# YAGO/WIKIDATA STARS GRAPH
+## YAGO/WIKIDATA STARS GRAPH
 
 A python script that creates a graph of all stars stored in YAGO (~14,000).<br />
 Stars are categorized by star type (YAGO) and constellation (Wikidata).<br />
 Relevant properties from YAGO and Wikidata are also included.<br />
 
-~IMAGE~
+![Alt text](/relative/path/to/yago-stars graph.jpg?raw=true)
 
-## MOTIVATION
+### MOTIVATION
 
 Testing the creation of data pipelines from open-source knowledge databases (YAGO, Wikidata, etc.) to the brane,<br /> 
 and using ontology mappers to automate the categorization of rdf-triples as topics, properties, or metadata.<br />
 
-## CODE OVERVIEW
+### CODE OVERVIEW
 
 * Read and save Schema (YAGO) and Wikidata ontology maps.
 * Create first layer of graph (root node, star cluster, star type cluster, constellation cluster).
@@ -25,3 +25,6 @@ and using ontology mappers to automate the categorization of rdf-triples as topi
         * Create topics and links for constellations and properties. Store metadata.<br />
     * **Create star topic and make the relevant links.**
 * Format topics and links, output json files, push data to yago-stars graph using topics api.
+
+### FUTURE USE CASES
+
