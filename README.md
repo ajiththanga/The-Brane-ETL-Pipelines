@@ -1,3 +1,5 @@
+~ Forked from The Brane. Two ETL pipelines I built for them using Python and SPARQL to integrate the RDFS knowledge database, *Yago*, into their existing data infrastructure. ~ 
+
 ## YAGO 4
 
 https://yago-knowledge.org/<br /> 
